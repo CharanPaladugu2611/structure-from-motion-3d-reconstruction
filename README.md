@@ -4,6 +4,8 @@ Turn 2D images into a 3D world — no LiDAR, no depth camera, just pure computer
 In this project, we implemented a complete Structure from Motion (SfM) pipeline using a series of 14 photos of a scene taken from different viewpoints. The system automatically matches features across images, estimates camera poses, triangulates points in 3D space, and refines everything using bundle adjustment — resulting in a sparse but accurate 3D reconstruction of the scene.
 This classical multi-view geometry project showcases the power of camera intrinsics, linear algebra, and some well-placed RANSAC
 
+---
+
 ## 🛠️ Core Pipeline
 
 - Feature Matching
@@ -25,6 +27,8 @@ This classical multi-view geometry project showcases the power of camera intrins
   * Jointly optimize camera parameters and 3D point positions
   * Minimizes reprojection error using non-linear least squares
 
+---
+
 ## 🔍 Results
 ✅ Sparse 3D reconstruction of a book/object captured from 14 different angles
 ✅ Visualized 3D point cloud and camera trajectory
@@ -33,6 +37,8 @@ This classical multi-view geometry project showcases the power of camera intrins
 ### 📷 Sample Output
 ![image](https://github.com/user-attachments/assets/4b8b0a1f-88de-47f8-8202-609d312de3f0)
 ![image](https://github.com/user-attachments/assets/3179bb62-a6b7-471a-8b31-154e134b102b)
+
+---
 
 ## 🧱 System Architecture
 ```
@@ -52,6 +58,9 @@ Bundle Adjustment Optimization
         ↓
 Export .ply → 3D Point Cloud Visualization
 ```
+
+---
+
 ## ⚙️ Tools & Technologies
 - Python
 
@@ -65,6 +74,8 @@ Export .ply → 3D Point Cloud Visualization
 
 - Custom functions for cheirality, BA, PnP, and matrix manipulation
 
+---
+
 ## 💡 Key Takeaways
 * Classical geometry methods can produce robust 3D reconstructions — no deep learning needed
 
@@ -75,6 +86,9 @@ Export .ply → 3D Point Cloud Visualization
 * Cheirality checks are critical in multi-solution pose estimation
 
 * Visualization of reprojection errors is a great sanity check
+
+---
+
 ## 🚀 Future Enhancements
 * Use ORB or learned descriptors (e.g., SuperPoint) for feature matching
 
